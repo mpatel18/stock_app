@@ -12,7 +12,7 @@ import styles from '../styles/Home.module.sass'
       <main>
         <Header title="Stook Lookup"/>
         <div className={styles.search}>
-          <Search/>
+          <Search url="/"/>
         </div>
       </main>
     </div>

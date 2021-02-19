@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router' 
 
-const Search = () => {
+const Search = ({ url }) => {
     const router = useRouter();
     const [search, setSearch] = useState('')
 
@@ -13,7 +13,7 @@ const Search = () => {
         e.key === 'Enter' && router.push(searchURL(search));
     }
 
-    const searchURL = (search) => `/${search}`
+    const searchURL = (search) => `${url}${search}`
 
     return (
         <>
